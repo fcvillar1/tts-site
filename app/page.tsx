@@ -126,7 +126,7 @@ export default function CompanyLandingPage() {
                   <p><span className="font-semibold text-white">CNPJ:</span> 65.322.001/0001-06</p>
                   <p><span className="font-semibold text-white">E-mail:</span> comercial@ttscompany.com.br</p>
                   <p><span className="font-semibold text-white">WhatsApp:</span> 11 94385-1140</p>
-                  <p><span className="font-semibold text-white">Atendimento:</span> Segunda à sexta, das 09h00 às 18h00</p>
+                  <p><span className="font-semibold text-white">Atendimento:</span> Segunda a sexta, das 09h00 às 18h00</p>
                 </div>
               </div>
             </div>
