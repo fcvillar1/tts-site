@@ -1,6 +1,11 @@
 export const metadata = {
   title: "TTS Company",
   description: "Soluções em informática para empresas, revendas e órgãos públicos",
+  icons: {
+    icon: "/logo-tts.png",
+    shortcut: "/logo-tts.png",
+    apple: "/logo-tts.png",
+  },
 };
 
 
