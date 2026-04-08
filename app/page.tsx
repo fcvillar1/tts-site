@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "TTS Company",
+  description: "Soluções em informática para empresas, revendas e órgãos públicos",
+};
+
+
 export default function CompanyLandingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-cyan-950 text-slate-100">
