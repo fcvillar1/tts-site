@@ -13,18 +13,18 @@ export default function CompanyLandingPage() {
             <div className="flex items-center gap-4">
               <img
                 src="/logo-tts.png"
-                alt="Logo TTS Company LTDA"
-                className="h-14 w-14 rounded-2xl object-contain bg-white p-1 shadow"
+                alt="Logo TTS Company"
+                className="h-32 w-32 md:h-36 md:w-36 rounded-2xl object-contain shadow-lg"
               />
               <div>
-                <h1 className="text-2xl font-bold tracking-tight text-white">TTS Company LTDA</h1>
+                <h1 className="text-2xl font-bold tracking-tight text-white">TTS Company</h1>
                 <p className="text-sm text-slate-300">
                   Soluções em informática para empresas, revendas e órgãos públicos
                 </p>
               </div>
             </div>
             <a
-              href="mailto:comercial@software.com.br"
+              href="mailto:comercial@ttscompany.com.br"
               className="rounded-2xl bg-cyan-400 px-4 py-2 text-sm font-medium text-slate-950 shadow-lg transition hover:opacity-90"
             >
               Fale conosco
@@ -47,7 +47,7 @@ export default function CompanyLandingPage() {
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
-                  href="mailto:comercial@software.com.br"
+                  href="mailto:comercial@ttscompany.com.br"
                   className="rounded-2xl bg-cyan-400 px-5 py-3 text-sm font-medium text-slate-950 shadow-lg transition hover:opacity-90"
                 >
                   Solicitar atendimento
@@ -124,7 +124,7 @@ export default function CompanyLandingPage() {
                 <div className="space-y-3 text-slate-200">
                   <p><span className="font-semibold text-white">Empresa:</span> TTS Company LTDA</p>
                   <p><span className="font-semibold text-white">CNPJ:</span> 65.322.001/0001-06</p>
-                  <p><span className="font-semibold text-white">E-mail:</span> comercial@software.com.br</p>
+                  <p><span className="font-semibold text-white">E-mail:</span> comercial@ttscompany.com.br</p>
                   <p><span className="font-semibold text-white">WhatsApp:</span> 11 94385-1140</p>
                   <p><span className="font-semibold text-white">Atendimento:</span> Segunda à sexta, das 09h00 às 18h00</p>
                 </div>
