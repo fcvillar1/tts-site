@@ -68,34 +68,53 @@ export default function ContatoPage() {
       </div>
 
       <div className="relative">
-        <header className="border-b border-white/10 bg-white/5 backdrop-blur">
-          <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-            <div className="flex items-center gap-4">
-              <img
-                src="/logo-tts.png"
-                alt="Logo TTS Company"
-                className="h-32 w-32 rounded-2xl object-contain shadow-lg md:h-36 md:w-36"
-              />
-              <div>
-                <Link href="/" className="block">
-                  <h1 className="text-2xl font-bold tracking-tight text-white">
-                    TTS Company
-                  </h1>
-                </Link>
-                <p className="text-sm text-slate-300">
-                  Soluções em informática para empresas, revendas e órgãos públicos
-                </p>
-              </div>
-            </div>
+<header className="border-b border-white/10 bg-white/5 backdrop-blur">
+  <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
+    <div className="flex items-center gap-6">
+      <Link href="/" className="block">
+        <img
+          src="/logo-tts.png"
+          alt="Logo TTS Company"
+          className="h-32 w-32 rounded-2xl object-contain shadow-lg md:h-36 md:w-36"
+        />
+      </Link>
 
-            <Link
-              href="/"
-              className="rounded-2xl border border-white/20 bg-white/5 px-4 py-2 text-sm font-medium text-white backdrop-blur transition hover:bg-white/10"
-            >
-              Voltar ao site
-            </Link>
-          </div>
-        </header>
+      <Link href="/" className="block">
+        <div>
+          <h1 className="text-2xl font-bold tracking-tight text-white">
+            TTS Company
+          </h1>
+          <p className="text-sm text-slate-300">
+            Soluções em informática para empresas, revendas e órgãos públicos
+          </p>
+        </div>
+      </Link>
+    </div>
+
+    <div className="flex items-center gap-3">
+      <Link
+        href="/"
+        className="rounded-2xl border border-white/20 bg-white/5 px-4 py-2 text-sm font-medium text-white shadow-lg transition hover:bg-white/10"
+      >
+        Início
+      </Link>
+
+      <Link
+        href="/empresa"
+        className="rounded-2xl border border-white/20 bg-white/5 px-4 py-2 text-sm font-medium text-white shadow-lg transition hover:bg-white/10"
+      >
+        A Empresa
+      </Link>
+
+      <Link
+        href="/contato"
+        className="rounded-2xl border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium text-white shadow-lg transition hover:bg-white/15"
+      >
+        Contato
+      </Link>
+    </div>
+  </div>
+</header>
 
         <main>
           <section className="mx-auto max-w-6xl px-6 py-20">
@@ -277,6 +296,11 @@ export default function ContatoPage() {
             </div>
           </section>
         </main>
+          <footer className="border-t border-white/10 bg-slate-950/40">
+            <div className="mx-auto max-w-6xl px-6 py-6 text-center text-sm text-slate-400">
+              TTS Company LTDA - CNPJ: 65.322.001/0001-06 - São Paulo - SP - Todos os direitos reservados
+            </div>
+          </footer>
       </div>
     </div>
   );

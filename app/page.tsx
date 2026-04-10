@@ -4,16 +4,29 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const slides = [
-  "/carrossel/slide1.jpg",
-  "/carrossel/slide2.jpg",
-  "/carrossel/slide3.jpg",
-  "/carrossel/slide4.jpg",
+  {
+    image: "/carrossel/slide1.jpg",
+    mobilePosition: "62% center",
+  },
+  {
+    image: "/carrossel/slide2.jpg",
+    mobilePosition: "58% center",
+  },
+  {
+    image: "/carrossel/slide3.jpg",
+    mobilePosition: "60% center",
+  },
+  {
+    image: "/carrossel/slide4.jpg",
+    mobilePosition: "52% center",
+  },
 ];
 
 export default function CompanyLandingPage() {
   const [contatoAberto, setContatoAberto] = useState(false);
   const [animarModal, setAnimarModal] = useState(false);
   const [slideAtual, setSlideAtual] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const intervalo = setInterval(() => {
@@ -21,6 +34,17 @@ export default function CompanyLandingPage() {
     }, 5500);
 
     return () => clearInterval(intervalo);
+  }, []);
+
+  useEffect(() => {
+    function verificarTela() {
+      setIsMobile(window.innerWidth < 768);
+    }
+
+    verificarTela();
+    window.addEventListener("resize", verificarTela);
+
+    return () => window.removeEventListener("resize", verificarTela);
   }, []);
 
   useEffect(() => {
@@ -92,52 +116,62 @@ export default function CompanyLandingPage() {
         </div>
 
         <div className="relative">
-          <header className="border-b border-white/10 bg-white/5 backdrop-blur">
-            <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-              <div className="flex items-center gap-4">
-                <img
-                  src="/logo-tts.png"
-                  alt="Logo TTS Company"
-                  className="h-32 w-32 rounded-2xl object-contain shadow-lg md:h-36 md:w-36"
-                />
-                <div>
-                  <h1 className="text-2xl font-bold tracking-tight text-white">
-                    TTS Company
-                  </h1>
-                  <p className="text-sm text-slate-300">
-                    Soluções em informática para empresas, revendas e órgãos públicos
-                  </p>
-                </div>
-              </div>
+        <header className="border-b border-white/10 bg-white/5 backdrop-blur">
+  <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
+    <div className="flex items-center gap-6">
+      <img
+        src="/logo-tts.png"
+        alt="Logo TTS Company"
+        className="h-32 w-32 rounded-2xl object-contain shadow-lg md:h-36 md:w-36"
+      />
 
-              <button
-                type="button"
-                onClick={abrirContato}
-                style={{ cursor: "pointer" }}
-                className="rounded-2xl bg-cyan-400 px-4 py-2 text-sm font-medium text-slate-950 shadow-lg transition hover:opacity-90"
-              >
-                Fale conosco
-              </button>
-            </div>
-          </header>
+      <div>
+        <h1 className="text-2xl font-bold tracking-tight text-white">
+          TTS Company
+        </h1>
+        <p className="text-sm text-slate-300">
+          Soluções em informática para empresas, revendas e órgãos públicos
+        </p>
+      </div>
+    </div>
+
+    <div className="flex items-center gap-3">
+      <Link
+        href="/empresa"
+        className="rounded-2xl border border-white/20 bg-white/5 px-4 py-2 text-sm font-medium text-white shadow-lg transition hover:bg-white/10"
+      >
+        A Empresa
+      </Link>
+
+      <button
+        type="button"
+        onClick={abrirContato}
+        style={{ cursor: "pointer" }}
+        className="rounded-2xl bg-cyan-400 px-4 py-2 text-sm font-medium text-slate-950 shadow-lg transition hover:opacity-90"
+      >
+        Fale conosco
+      </button>
+    </div>
+  </div>
+</header>
 
           <main>
             <section className="mx-auto max-w-6xl px-6 pt-8">
               <div
                 className="relative overflow-hidden rounded-3xl border border-white/10 shadow-2xl"
-                style={{ height: "430px" }}
+                style={{ height: isMobile ? "240px" : "430px" }}
               >
                 {slides.map((slide, index) => (
                   <div
-                    key={slide}
+                    key={slide.image}
                     style={{
                       position: "absolute",
                       inset: 0,
                       opacity: index === slideAtual ? 1 : 0,
                       transition: "opacity 1200ms cubic-bezier(0.22, 1, 0.36, 1)",
-                      backgroundImage: `url(${slide})`,
+                      backgroundImage: `url(${slide.image})`,
                       backgroundSize: "cover",
-                      backgroundPosition: "center",
+                      backgroundPosition: isMobile ? slide.mobilePosition : "center",
                       backgroundRepeat: "no-repeat",
                     }}
                   >
@@ -340,7 +374,7 @@ export default function CompanyLandingPage() {
 
           <footer className="border-t border-white/10 bg-slate-950/40">
             <div className="mx-auto max-w-6xl px-6 py-6 text-center text-sm text-slate-400">
-              TTS Company LTDA - CNPJ: 65.322.001/0001-06 - Todos os direitos reservados
+              TTS Company LTDA - CNPJ: 65.322.001/0001-06 - São Paulo - SP - Todos os direitos reservados
             </div>
           </footer>
         </div>
