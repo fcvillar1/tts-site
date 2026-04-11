@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-
+import SiteHeader from "../components/SiteHeader";
 
 export default function ContatoPage() {
   const [form, setForm] = useState({
@@ -68,53 +68,7 @@ export default function ContatoPage() {
       </div>
 
       <div className="relative">
-<header className="border-b border-white/10 bg-white/5 backdrop-blur">
-  <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-    <div className="flex items-center gap-6">
-      <Link href="/" className="block">
-        <img
-          src="/logo-tts.png"
-          alt="Logo TTS Company"
-          className="h-32 w-32 rounded-2xl object-contain shadow-lg md:h-36 md:w-36"
-        />
-      </Link>
-
-      <Link href="/" className="block">
-        <div>
-          <h1 className="text-2xl font-bold tracking-tight text-white">
-            TTS Company
-          </h1>
-          <p className="text-sm text-slate-300">
-            Soluções em informática para empresas, revendas e órgãos públicos
-          </p>
-        </div>
-      </Link>
-    </div>
-
-    <div className="flex items-center gap-3">
-      <Link
-        href="/"
-        className="rounded-2xl border border-white/20 bg-white/5 px-4 py-2 text-sm font-medium text-white shadow-lg transition hover:bg-white/10"
-      >
-        Início
-      </Link>
-
-      <Link
-        href="/empresa"
-        className="rounded-2xl border border-white/20 bg-white/5 px-4 py-2 text-sm font-medium text-white shadow-lg transition hover:bg-white/10"
-      >
-        A Empresa
-      </Link>
-
-      <Link
-        href="/contato"
-        className="rounded-2xl border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium text-white shadow-lg transition hover:bg-white/15"
-      >
-        Contato
-      </Link>
-    </div>
-  </div>
-</header>
+        <SiteHeader />
 
         <main>
           <section className="mx-auto max-w-6xl px-6 py-20">
