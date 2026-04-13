@@ -207,17 +207,35 @@ export default function EmpresaPage() {
 
                   <div style={textBlockStyle}>
                     <p style={paragraphStyle}>
-                      A empresa já atua como revendedora autorizada de fabricantes
-                      reconhecidos no mercado nacional, como Positivo e VAIO, o que reforça
-                      seu compromisso com a qualidade dos produtos oferecidos e a
-                      confiabilidade nas relações comerciais.
+                      A TTS Company atua na comercialização de equipamentos e soluções de
+                      tecnologia com foco em qualidade, confiabilidade e aderência às
+                      necessidades do mercado corporativo e do setor público.
                     </p>
 
                     <p style={paragraphStyle}>
-                      Esse posicionamento demonstra capacidade de atuação dentro de padrões
-                      comerciais exigidos por fabricantes relevantes do setor de tecnologia,
-                      além de reforçar a credibilidade da TTS Company na expansão de seu
-                      portfólio e de suas parcerias estratégicas.
+                      Como parte desse posicionamento, a empresa já opera como
+                      <strong style={{ color: "#ffffff" }}>
+                        {" "}
+                        revendedora autorizada de marcas reconhecidas no mercado nacional
+                      </strong>
+                      , entre elas <strong style={{ color: "#ffffff" }}>Positivo</strong> e{" "}
+                      <strong style={{ color: "#ffffff" }}>VAIO</strong>, reforçando sua
+                      capacidade de atuação dentro de padrões comerciais e operacionais
+                      exigidos por fabricantes relevantes do setor.
+                    </p>
+
+                    <p style={paragraphStyle}>
+                      Essa base de relacionamento com fabricantes demonstra o compromisso da
+                      TTS Company com a oferta de produtos confiáveis, atendimento
+                      consultivo e construção de parcerias de longo prazo, sempre com foco em
+                      desempenho, segurança comercial e evolução contínua do portfólio.
+                    </p>
+
+                    <p style={paragraphStyle}>
+                      Nosso objetivo é ampliar continuamente a atuação junto a fabricantes
+                      estratégicos, consolidando a empresa como parceira comercial preparada
+                      para atender demandas corporativas, projetos sob medida e processos do
+                      setor público com profissionalismo, organização e responsabilidade.
                     </p>
                   </div>
                 </div>
@@ -243,6 +261,10 @@ export default function EmpresaPage() {
                     </p>
                     <p style={paragraphStyle}>
                       • Atuação voltada ao mercado corporativo e ao setor público
+                    </p>
+                    <p style={paragraphStyle}>
+                      • Base comercial estruturada para expansão de portfólio e novas
+                      parcerias estratégicas
                     </p>
                   </div>
                 </div>
